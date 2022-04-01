@@ -12,10 +12,10 @@
   <li>Criação e inicialização de variáveis</li>  
   <li>Convenções para nomenclatura: Sistemas húngaro x Apps húngaro</li>
   <li>Tipos de dados: tipos primitivos e por referência</li>
-  <li>Manipulação de arrays</li>
-  <li>Manipulação de Strings</li>
-  <li>Conversões de tipos</li>
-  <li>Tratamento de exceções</li>  
+  <li>Manipulação de arrays: vetores e matrizes estáticos</li>
+  <li>Manipulação de Strings: métodos</li>
+  <li>Conversões de tipos: métodos</li>
+  <li>Tratamento de exceções: comandos try e catch</li>  
  </ul> 
 
 
