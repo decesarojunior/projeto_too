@@ -18,6 +18,7 @@
   <li>Tratamento de exceções: comandos try e catch</li>  
  </ul> 
 
+<p>Exercícios práticos:</p>
 
 <p>Fontes:</p> 
 
