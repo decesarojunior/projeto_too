@@ -7,8 +7,11 @@ package br.edu.ifsul.bcc.too.base.topico3;
  */
 public class TiposDados {
     
+    int v;//global ou variáveis de instância 
+    
     public static void main(String[] args) {
         
+        int a;
 
         /*
             Tipos de Dados:
@@ -34,18 +37,35 @@ public class TiposDados {
 
         */
 
-        String strTime = new String("Internacional");//o operador new sempre cria uma nova instância/alocação de espaço para o objeto.
-
+        String strTime = new String("Internacional");
+       //o operador new sempre cria uma nova instância/alocação 
+       ///de espaço para o objeto.
         String strAuxiliar = "Internacional";
-
+        String strAuxiliar2 = new String("Internacional");
+        String strAuxiliar3 = "Internacional";
+        
+        if(strAuxiliar == strAuxiliar3){
+            System.out.println("Instâncias iguais - strAuxiliar == strAuxiliar3 ");
+        }else{
+            System.out.println("instancias diferentes. - strAuxiliar == strAuxiliar3 ");
+        }
+        
         if(strTime == strAuxiliar){
-
-            System.out.println("Instâncias iguais");
+            System.out.println("Instâncias iguais - strTime == strAuxiliar ");
+        }else{
+            System.out.println("instancias diferentes. - strTime == strAuxiliar");
+        }
+        
+        if(strTime == strAuxiliar2){
+            System.out.println("Instâncias iguais - strTime == strAuxiliar2");
+        }else{
+            System.out.println("instancias diferentes.  - strTime == strAuxiliar2");
         }
 
         if(strTime.equals(strAuxiliar)){
-
-            System.out.println("conteúdos iguais");
+            System.out.println("conteúdos iguais - strTime.equals(strAuxiliar)");
+        }else{
+            System.out.println("conteúdos diferentes - strTime.equals(strAuxiliar)");
         }        
         
     }

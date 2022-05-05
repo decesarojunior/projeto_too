@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package br.edu.ifsul.bcc.too.base.topico3;
 
 /**
@@ -23,11 +19,15 @@ public class ConversoesTipos {
         
         Integer iValor = Integer.parseInt(strValor1);
         
+        iValor = Integer.parseInt(strValor2);
+        
         iValor = Integer.valueOf(strValor1);                
         
         Float fValor = Float.parseFloat(strValor3);
         
         String strTeste = fValor.toString();
+        
+        System.out.println(iValor);
         
     }
     
