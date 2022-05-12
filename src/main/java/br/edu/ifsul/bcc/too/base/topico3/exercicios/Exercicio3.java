@@ -10,9 +10,9 @@ public class Exercicio3 {
     
     public static void main(String[] args) {
 
-        int[][] rgDados1 = new int[2][3];
+        int[][] rgDados1 = new int[2][3];//linha e coluna - se a quantidade de coluna da primeira
 
-        int[][] rgDados2 = new int[3][2];
+        int[][] rgDados2 = new int[3][2];//for igual a quantida de linha da segunda.
 
         int[][] rgDados3 = new int[2][2];
 

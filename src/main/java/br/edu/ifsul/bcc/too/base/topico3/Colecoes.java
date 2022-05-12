@@ -3,7 +3,6 @@ package br.edu.ifsul.bcc.too.base.topico3;
 
 import br.edu.ifsul.bcc.too.base.topico3.util.Aluno;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -57,7 +56,7 @@ public class Colecoes {
     private Map<String, String> mp;
     
     //construtor        
-    Colecoes(){
+    protected Colecoes(){
         
     }
             
@@ -80,11 +79,10 @@ public class Colecoes {
 
             System.out.println("Elemento da List: " + lst.get(i));//List possibilita a recuperacao pelo indice.
         }                        
-        System.out.println("Contem o elemento com o valor 150: " + lst.contains(150));
+        //System.out.println("Contem o elemento com o valor 150: " + lst.contains(150));
         
         
     }
-    
     
     public Colecoes(String tipo){
         
@@ -96,16 +94,14 @@ public class Colecoes {
         st.add("Brasil");
         st.add("Belgica");
         st.add("Japão");
-        st.add("Brasil");                
-        
+        st.add("Brasil");               
+                
+                
         for( Object o : st){
             
             System.out.println("Elemento do Set: "+ (String)  o);
         }                        
     }
-    
-
-    
     
     public void metodoHashmap(){
         
@@ -113,14 +109,17 @@ public class Colecoes {
         mp = new HashMap();
         
         mp.put("id", "1");
+        mp.put("uz", "0000134");
         mp.put("cpf", "0000134");
+        
         
         for (Map.Entry<String, String> m : mp.entrySet()) {
         
             System.out.println("Chave "+m.getKey() + " Valor : "+ m.getValue());    
-        }                
+        } 
+       
         
-        //System.out.println(mp);        
+        System.out.println("chave uz: " + mp.get("uz"));
         
     }
     
@@ -164,14 +163,14 @@ public class Colecoes {
         
     }
     
-
-    
-
-    
     
     public static void main(String[] args) {
         
-         new Colecoes().metodoClassificacao();
+         new Colecoes().metodoHashmap();
+        
+        //Colecoes c = new Colecoes("0");
+        
+         //c.metodoHashmap();
     }
     
 }
