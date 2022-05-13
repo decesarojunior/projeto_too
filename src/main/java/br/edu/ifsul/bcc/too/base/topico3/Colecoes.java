@@ -107,20 +107,14 @@ public class Colecoes {
         
         // Escolha esta implementação se a ordenação não for importante e desejar uma estrutura onde seja necessário um ID (identificador). 
         mp = new HashMap();
-        
         mp.put("id", "1");
         mp.put("uz", "0000134");
         mp.put("cpf", "0000134");
         
-        
-        for (Map.Entry<String, String> m : mp.entrySet()) {
-        
+        for (Map.Entry<String, String> m : mp.entrySet()) {        
             System.out.println("Chave "+m.getKey() + " Valor : "+ m.getValue());    
         } 
-       
-        
-        System.out.println("chave uz: " + mp.get("uz"));
-        
+        System.out.println("chave uz: " + mp.get("uz")); 
     }
     
     public void metodoClassificacaoMap(){
