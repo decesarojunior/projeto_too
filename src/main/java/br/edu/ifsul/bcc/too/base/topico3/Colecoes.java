@@ -110,6 +110,7 @@ public class Colecoes {
         mp.put("id", "1");
         mp.put("uz", "0000134");
         mp.put("cpf", "0000134");
+        mp.put("id", "100000");
         
         for (Map.Entry<String, String> m : mp.entrySet()) {        
             System.out.println("Chave "+m.getKey() + " Valor : "+ m.getValue());    
@@ -122,10 +123,12 @@ public class Colecoes {
         //Aplicação semelhante a HashMap, com a diferença que TreeMap perde no quesito desempenho;
         SortedMap<String, Aluno> map = new TreeMap();
         
-        map.put("3" , new Aluno("123a","telmo"));
+        
         map.put("2" , new Aluno("456a","junior"));
         map.put("1" , new Aluno("789a","fulano"));
-            
+        map.put("0" , new Aluno("789a","abel"));
+        map.put("-1" , new Aluno("789a","abel"));
+        map.put("3" , new Aluno("123a","telmo"));
         
         for (Map.Entry<String, Aluno> m : map.entrySet()) {
         
@@ -134,7 +137,6 @@ public class Colecoes {
         
     }
         
-            
     public void metodoClassificacao(){
         
         List<Aluno> list = new ArrayList();
@@ -148,7 +150,6 @@ public class Colecoes {
         Aluno c = new Aluno("20212.pf003","fulano");
         list.add(c);
         
-        
         System.out.println(list);
         
         Collections.sort(list);
@@ -160,7 +161,7 @@ public class Colecoes {
     
     public static void main(String[] args) {
         
-         new Colecoes().metodoHashmap();
+         new Colecoes().metodoClassificacao();
         
         //Colecoes c = new Colecoes("0");
         
