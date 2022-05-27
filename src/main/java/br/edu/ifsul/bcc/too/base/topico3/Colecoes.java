@@ -161,9 +161,9 @@ public class Colecoes {
     
     public static void main(String[] args) {
         
-         new Colecoes().metodoClassificacao();
+        // new Colecoes().metodoClassificacao();
         
-        //Colecoes c = new Colecoes("0");
+           Colecoes c = new Colecoes("0");
         
          //c.metodoHashmap();
     }

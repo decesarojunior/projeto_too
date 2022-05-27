@@ -30,7 +30,7 @@ public class Resposta7 {
         
         //exercicio71();
         //exercicio72();
-        exercicio73();
+        //exercicio73();
     }
     
     public void exercicio71(){
@@ -62,8 +62,7 @@ public class Resposta7 {
            mapCarros.put(3, c2);
            mapCarros.put(4, c3);
            mapCarros.put(5, c4);
-                      
-                   
+                           
             for (Map.Entry<Integer, Carro> m : mapCarros.entrySet()) {        
                   System.out.println("Chave "+m.getKey() + " Valor : "+ m.getValue());    
             } 
