@@ -23,9 +23,9 @@ public class ConversoesDatas {
     
     ConversoesDatas(){
         
-        //testesInicializacao();
-        //testesImpressao();
-        //testesConversao();
+       // testesInicializacao();
+       // testesImpressao();
+       // testesConversao();
         testesComparacao();
         
     }
@@ -35,7 +35,7 @@ public class ConversoesDatas {
         //inicialização do tipo java.util.Calendar
         java.util.Calendar data_util_antes = java.util.Calendar.getInstance();
         
-        //inicialização do tipo java.util.Date
+        //inicialização do tipo java.util.Calendar
         java.util.Calendar data_util_depois = java.util.Calendar.getInstance();
         
         //CompareTo: -1 se for menor, 0 se for igual e 1 se for maior (mais recente).
@@ -46,7 +46,9 @@ public class ConversoesDatas {
        //SSS - Millisecond 
        formatadorData = new SimpleDateFormat("SSS");        
        
-       data_util_date = new java.util.Date(data_util_depois.getTimeInMillis() - data_util_antes.getTimeInMillis());
+       data_util_date = new java.util.Date
+        (data_util_depois.getTimeInMillis() - 
+                data_util_antes.getTimeInMillis());
        
        System.out.println("F: "+ formatadorData.format(data_util_date));
        
@@ -91,7 +93,7 @@ public class ConversoesDatas {
     
     private void testesImpressao(){
         
-        formatadorData = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");        
+        formatadorData = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");        
         
         try {
             
@@ -109,7 +111,7 @@ public class ConversoesDatas {
             System.out.println("Data java.util.Calendar format :" + formatadorData.format(data_util_calendar.getTime()));
             
             
-            formatadorData.applyPattern("E, d 'de' MMM 'de' YYY");
+            formatadorData.applyPattern("EEEE, d 'de' MMMM 'de' YYY");
             
             System.out.println("Data java.util.Calendar format :" + formatadorData.format(data_util_calendar.getTime()));
             

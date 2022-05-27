@@ -12,7 +12,7 @@ package br.edu.ifsul.bcc.too.base.topico3.util;
  */
 
 
-public class Pneu {
+public class Pneu implements Comparable<Pneu> {
     
     private Integer codigo;
     private String modelo;
@@ -36,5 +36,12 @@ public class Pneu {
         
         return codigo + " - " + modelo;
     }
+
+    @Override
+    public int compareTo(Pneu t) {
+        
+        return modelo.compareTo(t.modelo);
+    }
+    
     
 }
