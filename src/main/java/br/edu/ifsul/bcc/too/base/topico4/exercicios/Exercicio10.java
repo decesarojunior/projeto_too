@@ -1,6 +1,11 @@
 
 package br.edu.ifsul.bcc.too.base.topico4.exercicios;
 
+import br.edu.ifsul.bcc.too.base.topico4.exercicios.util.Cliente;
+import br.edu.ifsul.bcc.too.base.topico4.exercicios.util.ClientePessoaFisica;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author telmo
@@ -41,4 +46,27 @@ public class Exercicio10 {
                 - Nome fantasia: Bar do Zé (Pessoa Juridica)
     
     */
+    
+    Exercicio10(){
+        
+        List<Cliente> lista = new ArrayList<>();
+        
+        ClientePessoaFisica pf = new ClientePessoaFisica();
+        
+        lista.add(pf);
+        
+        for(Cliente c : lista){
+            if(c instanceof ClientePessoaFisica){
+                
+            }
+        }
+        
+    }
+    
+    public static void main(String args[]){
+        
+        
+        new Exercicio10();
+    }
+            
 }

@@ -22,6 +22,7 @@ public class Pessoa {
     private String corCabelo;
     private Calendar dataNascimento;
     private Float altura;
+    private Integer idade;
     
     /*
       Acessibilidade: permite implementar o encapsulamento. Ou seja, encapsular (ocultar) a complexidade (código) 
@@ -50,6 +51,18 @@ public class Pessoa {
         this.nome = nome;
     }
     
+    protected Pessoa (String cpf, String nome, String corOlhos, String corCabelo, Calendar dataNascimento, Float altura){
+        
+        this.cpf = cpf;
+        this.nome = nome;
+        this.corOlhos = corOlhos;
+        this.corCabelo = corCabelo;
+        this.dataNascimento = dataNascimento;
+        this.altura = altura;
+    }
+    
+   
+    
     //Sobreposição: permite reescrever um método em uma subclasse que possua comportamento diferente
     //do método de mesma assinatura na superclasse.
     @Override
@@ -73,6 +86,84 @@ public class Pessoa {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    /**
+     * @return the cpf
+     */
+    public String getCpf() {
+        return cpf;
+    }
+
+    /**
+     * @param cpf the cpf to set
+     */
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    /**
+     * @return the corOlhos
+     */
+    public String getCorOlhos() {
+        return corOlhos;
+    }
+
+    /**
+     * @param corOlhos the corOlhos to set
+     */
+    public void setCorOlhos(String corOlhos) {
+        this.corOlhos = corOlhos;
+    }
+
+    /**
+     * @return the corCabelo
+     */
+    public String getCorCabelo() {
+        return corCabelo;
+    }
+
+    /**
+     * @param corCabelo the corCabelo to set
+     */
+    public void setCorCabelo(String corCabelo) {
+        this.corCabelo = corCabelo;
+    }
+
+    /**
+     * @return the dataNascimento
+     */
+    public Calendar getDataNascimento() {
+        return dataNascimento;
+    }
+
+    /**
+     * @param dataNascimento the dataNascimento to set
+     */
+    public void setDataNascimento(Calendar dataNascimento) {
+        this.dataNascimento = dataNascimento;
+        
+        Calendar dtAtual = Calendar.getInstance();
+        
+        this.idade = dtAtual.get(Calendar.YEAR) - this.dataNascimento.get(Calendar.YEAR);
+    }
+
+    /**
+     * @return the altura
+     */
+    public Float getAltura() {
+        return altura;
+    }
+
+    /**
+     * @param altura the altura to set
+     */
+    public void setAltura(Float altura) {
+        this.altura = altura;
+    }
     
+    
+    public Integer getIdade(){        
+        return this.idade;
+    }
     
 }
