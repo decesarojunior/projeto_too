@@ -1,0 +1,128 @@
+
+@startuml
+
+package br.edu.ifsul.cc.lpoo.cs.model {
+
+    class Compra {
+        -Integer id
+        -Calendar data
+        -Float total
+    }
+    class Jogador {
+        -String nickname
+        -String senha
+        -Integer pontos
+        -Calendar data_cadastro
+        -Calendar data_ultimo_login
+        +getNickname()
+        +setNickname()
+        +getSenha()
+        +setSenha()
+        +getPontos()
+        +setPontos()
+        +getDataCadastro()
+        +setDataCadastro()
+        +getDataUltimoLogin()
+        +setDataUltimoLogin()    
+    }
+    class Endereco {
+        -Integer id
+        -String cep
+        -String complemento
+        +getId()
+        +setId()
+        +getCep()
+        +setCep()
+        +getComplemento()
+        +setComplemento()        
+    }
+    class Patente {
+        -Integer id
+        -String nome
+        -String cor
+    }
+    abstract class Artefato {
+        -Integer id
+        -String nome
+        -Float peso
+        -Float valor
+    }
+    class Municao {
+        -Boolean explosiva 
+    }
+    class Arma {    
+        -Float comprimento_cano
+    }
+    class Round {
+        -Integer id
+        -Integer numero
+        -Calendar inicio
+        -Calendar fim
+    }
+    class Objetivo {
+        -Integer id
+        -String descricao
+        -Integer pontos
+    }
+    class Mapa {
+        -Integer id
+        -String nome;        
+    }
+    class Local {
+        -Integer id
+        -String nome
+        -String latitude
+        -String longitude
+    }
+   
+
+    class Partida {
+        -Integer id
+        -Calendar inicio
+        -Calendar fim    
+    }
+
+    class ItensCompra {
+        -Integer id
+        -String quantidade
+        -Float valor
+    }
+    enum Calibre {
+        C03
+        C05
+        C08
+    }
+    enum Modo {
+        TERRORISTA
+        CONTRATERRORISTA
+    }
+    enum Tipo {
+        BRANCA
+        FOGO
+    }
+
+    Artefato <|-- Municao :herda
+    Artefato <|-- Arma : herda
+
+    Arma o--> Municao
+    Compra *--> ItensCompra : composição
+    Endereco <-- Jogador : associação
+    Partida *--> Round
+    Jogador <-- Partida
+    Jogador *--> Compra
+    Jogador o--> Artefato
+    Jogador o--> Patente
+    Objetivo o--> Local
+    
+    Mapa o--> Local : agregação
+    
+    Modo <-- Round
+    Artefato <-- ItensCompra
+    Calibre <-- Municao
+    Tipo <-- Arma        
+    
+    Round o--> Objetivo
+    
+}
+
+@enduml
