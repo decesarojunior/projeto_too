@@ -24,8 +24,16 @@ public class EnumJava {
         ExemploEnum status = ExemploEnum.ATIVO;
         
         System.out.println("status: "+status);
-        
-        
+         System.out.println("status: "+status.toString());
+         
+          ExemploEnum teste = null;
+          
+          String descricao = "ATIVO";
+          
+          //setar a variavel teste com a constante que corresponde a string "ATIVO".
+          //ou seja: converter a variavel descricao para o tipo ExemploEnum
+          
+          teste = ExemploEnum.valueOf(descricao);
         
         
     }

@@ -10,6 +10,11 @@ import java.util.Calendar;
 public interface ExemploInterface {
     
     
-    public String getDataAtual();
+    public String getDataAtual() throws Exception;
+    
+    
+    public int getAnoAtual();
+    
+    
     
 }

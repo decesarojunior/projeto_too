@@ -4,6 +4,8 @@ package br.edu.ifsul.bcc.too.base.topico4;
 import com.sun.jdi.InterfaceType;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -13,17 +15,16 @@ public class InterfacesJava implements ExemploInterface{
     
     InterfacesJava(){
         
-        System.out.println("DAta atual: "+getDataAtual());
+        try {
+            System.out.println(""+getDataAtual());
+            
+            //  System.out.println("DAta atual: "+getDataAtual());
+        } catch (Exception ex) {
+            Logger.getLogger(InterfacesJava.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
-    @Override
-    public String getDataAtual() {
-                
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
-        return sdf.format(c.getTime());
-        
-    }
+
     
     
     //https://www.devmedia.com.br/interfaces-programacao-orientada-a-objetos/18695
@@ -45,6 +46,22 @@ public class InterfacesJava implements ExemploInterface{
         
         new InterfacesJava();
         
+       
+        
+    }
+
+    @Override
+    public String getDataAtual() throws Exception {
+                
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
+        return sdf.format(c.getTime());
+        
+    }
+
+    @Override
+    public int getAnoAtual() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     
